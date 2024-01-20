@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercio 3: Adivina el Password</title>
+</head>
+<body>
+    <h2>Ingresa el password</h2>
+    <select id="primerNum">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+    <select id="segundoNum">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+    <select id="tercerNum">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+    <button onclick="
+    const primerNum = document.querySelector('#primerNum').value
+    const segundoNum = document.querySelector('#segundoNum').value
+    const tercerNum = document.querySelector('#tercerNum').value
+    const resultado = primerNum + segundoNum + tercerNum
+    if(resultado === '911'){
+        const parrafo = document.querySelector('#texto-oculto')
+        parrafo.innerHTML = 'Password 1 correcto'
+    } else if(resultado === '714'){
+        const parrafo = document.querySelector('#texto-oculto')
+        parrafo.innerHTML = 'Password 2 correcto'
+    }else{
+        const parrafo = document.querySelector('#texto-oculto')
+        parrafo.innerHTML = 'Password incorrecto'
+    }
+    ">Ingresar</button>
+    <p id="texto-oculto"></p>
+</body>
+</html>

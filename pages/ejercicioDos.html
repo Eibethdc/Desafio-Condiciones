@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/ejercicioDos.css">
+    <title>Ejercio 2: Tienda de Stickers</title>
+</head>
+<body>
+    <h4>Puedes llevar hasta 10 stickers en total</h4>
+    <div class="container">
+        <div class="container-son">
+            <img src="../assets/img/sticker1.jpg" alt="gitHub">
+            <input id="valor-gitHub" type="number" min="0">
+        </div>
+        <div class="container-son">
+            <img src="../assets/img/sticker2.jpg" alt="slack">
+            <input id="valor-slack" type="number" min="0">
+        </div>
+        <div class="container-son">
+            <img src="../assets/img/sticker3.jpg" alt="git">
+            <input id="valor-git" type="number" min="0">
+        </div>
+    </div>
+    <div class="boton">
+        <button onclick="
+            const gitHub = document.querySelector('#valor-gitHub').value
+            const slack = document.querySelector('#valor-slack').value
+            const git = document.querySelector('#valor-git').value
+            const resultado = Number(gitHub) + Number(slack) + Number(git) 
+            if(resultado >= 0 && resultado <= 10){
+                const parrafo = document.querySelector('#texto-oculto')
+                parrafo.innerHTML = 'Llevas ' + resultado + ' stickers'
+            } else if (resultado > 10){
+                const parrafo = document.querySelector('#texto-oculto')
+                parrafo.innerHTML = 'Llevas demasiados stickers'
+            }else{
+                alert('Menos cero, numero no valido')
+            }
+            " >Verificar</button>
+    </div>
+    <p id="texto-oculto"></p>
+</body>
+</html>

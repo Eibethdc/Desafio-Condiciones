@@ -1,0 +1,27 @@
+h4{
+    text-align: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.container-son{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-son img{
+    width: 250px;
+}
+.container-son input{
+    width: 150px;
+}
+.boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+p{
+    text-align: center;
+}

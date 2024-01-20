@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1: Agrega y quita borde a la imagen</title>
+</head>
+<body>
+    <img src="../assets/img/requerimiento1.jpg" alt="Bombilla" id="bombilla" class="border" onclick="
+    const imagen = document.querySelector('#bombilla')    
+    if (imagen.className == 'border'){
+        const border = document.querySelector('.border').style.border = '2px solid red'
+        imagen.classList = 'noBorder'
+    } else if(imagen.className == 'noBorder') {
+        const noBorder = document.querySelector('.noBorder').style.border = 'none'
+        imagen.classList = 'border'
+    }
+    ">
+</body>
+</html>
